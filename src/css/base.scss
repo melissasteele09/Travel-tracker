@@ -1,6 +1,56 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
 $primary-background: blue;
+$primary-font: "Lateef";
 
 body {
-  background-color: $primary-background;
+  background-image: url("../images/water.jpg");
+  background-size: cover;
+  font-family: $primary-font;
+  color: #310348;
+}
+
+#heading {
+  font-size: 4.5rem;
+  margin-top: 4%;
+  margin-left: 4%;
+}
+
+.headingCap {
+  text-transform: uppercase;
+}
+
+form {
+  background: rgba(255,255,255,0.6);
+  width: 25%;
+  margin-left: 35%;
+  margin-top: 12%;
+  padding: 2%;
+  border-radius: 5%;
+}
+
+#fields {
+  display: flex;
+  display: inline;
+  font-size: 1.25rem;
+}
+
+#username{
+  margin-bottom: 5%;
+}
+
+#password {
+  margin-bottom: 5%;
+}
+
+input {
+  font-size: 1.25rem;
+}
+
+button {
+  width: 80%;
+  font-size: 1rem;
+  margin-left: 10%;
+  font-family: $primary-font;
+  color: #FFFFFF;
+  background-color: #310348;
 }
