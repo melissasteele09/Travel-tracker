@@ -41,7 +41,7 @@ const databaseController = {
   },
 
 
-  loadAgent() {
+  loadAgency() {
     allTrips.map(trip => trip.location = allDestinations.filter(destination => destination.id === trip.destinationID))
     agent = new Agent(allUsers, allTrips)
   }
