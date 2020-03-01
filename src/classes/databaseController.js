@@ -2,9 +2,10 @@ import Agency from './classes/agency.js'
 import domUpdates from './domUpdates.js'
 import Traveler from './classes/traveler.js'
 
-let allUsers;
-let allTrips;
+let agency;
 let allDestinations;
+let allTrips;
+let allUsers;
 let traveler;
 
 const userData = fetch('https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/travelers/travelers')
@@ -32,13 +33,19 @@ Promise.all([userData, tripsData, destinationsData])
 
 
 const databaseController = {
-
   loadUser(id) {
     let user = allUsers[id - 1]
     let trips = allTrips.filter(trip => trip.userID === parseInt(id))
     traveler = new Traveler(user, trips)
     domUpdates.loadTraveler(traveler, allDestinations)
   },
+
+
+  loadAgent() {
+    allTrips.map(trip => trip.location = allDestinations.filter(destination => destination.id === trip.destinationID))
+    agent = new Agent(allUsers, allTrips)
+  }
+}
 
 
 export default databaseController;
