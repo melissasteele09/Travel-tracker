@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
-    <title>Out of Town</title>
-  </head>
-  <body>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+  <title>Out of Town</title>
+</head>
+
+<body>
+  <section id="home-page">
     <h1 id="heading"><span class="headingCap">Out</span> of <span class="headingCap">Town</span></h1>
     <form>
       <section id="fields">
         <div id="username">
-          <label>Username:</label>
+          <label for="enter username">Username:</label>
           <input type="text">
         </div>
         <div id="password">
-          <label>Password:</label>
+          <label for="enter password">Password:</label>
           <input type="password">
         </div>
       </section>
@@ -21,7 +24,52 @@
         <button>Bon Voyage!</button>
       </div>
     </form>
+  </section>
 
-    <!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->
-  </body>
+  <section id="traveler-view">
+    <section class="client-dashboard">
+      <section class="welcome">
+
+      </section>
+      <section id="total-cost-of-trips">
+        <h2>Total Cost Of Trips</h2>
+      </section>
+      <section id="upcoming-trips">
+        <h2>Upcoming Trips</h2>
+      </section>
+      <section id="past-trips">
+        <h2>Past Trips</h2>
+      </section>
+      <section id="pending-trips">
+        <h2>Pending Trips</h2>
+      </section>
+      <div id="new-trip">
+        <button id="book-trip">Book New Trip</button>
+      </div>
+    </section>
+  </section>
+
+  <section id="agency-view">
+    <section class="client-dashboard">
+      <section class="welcome">
+
+      </section>
+      <section id="agency-income">
+        <h2>Total Income</h2>
+      </section>
+      <section id="travelers-today">
+        <h2>Traveler's Today</h2>
+      </section>
+      <section id="agency-pending-trips">
+        <h2>Pending Trips</h2>
+        <!-- <button id="approve">Approve</button>
+        <button id="Deny">Deny</button> -->
+      </section>
+    </section>
+  </section>
+
+
+<!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->
+</body>
+
 </html>
