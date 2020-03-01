@@ -9,6 +9,9 @@ class Traveler extends Utility {
     this.travelerType = info.travelerType,
     this.trips = trips
   }
+  displayUpcomingTrips() {
+    return this.trips.filter(trip => trip.status === 'approved')
+  }
 
 }
 
