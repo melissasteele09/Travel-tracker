@@ -20,5 +20,10 @@ class UserUtility {
     return datesFromLastYear
   }
 
+  convertNumberToDollars(number) {
+    let dollar = "$" + number.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    return dollar
+  }
+}
 
 export default UserUtility
