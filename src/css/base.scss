@@ -20,7 +20,7 @@ body {
 }
 
 form {
-  background: rgba(255,255,255,0.6);
+  background: rgba(49, 3, 72, 0.8);
   width: 25%;
   margin-left: 35%;
   margin-top: 12%;
@@ -36,10 +36,12 @@ form {
 
 #username{
   margin-bottom: 5%;
+  color: #FFFFFF;
 }
 
 #password {
   margin-bottom: 5%;
+  color: #FFFFFF;
 }
 
 input {
@@ -51,6 +53,6 @@ button {
   font-size: 1rem;
   margin-left: 10%;
   font-family: $primary-font;
-  color: #FFFFFF;
-  background-color: #310348;
+  color: #310348;
+  background-color: #FFFFFF;
 }
