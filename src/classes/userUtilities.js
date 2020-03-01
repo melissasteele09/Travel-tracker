@@ -12,5 +12,13 @@ class UserUtility {
     return moment().format("LLLL")
   }
 
+  getDatesFromLastYear() {
+    let datesFromLastYear = []
+    for (var i = 0; i < 365; i++) {
+      datesFromLastYear.push(moment().subtract(i, "days").format("YYYY/MM/DD"))
+    }
+    return datesFromLastYear
+  }
+
 
 export default UserUtility
