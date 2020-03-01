@@ -9,14 +9,25 @@ class Traveler extends Utility {
     this.travelerType = info.travelerType,
     this.trips = trips
   }
-  displayApprovedUpcomingTrips() {
+
+  displayAllApprovedTrips() {
     return this.trips.filter(trip => trip.status === 'approved')
   }
 
   displayPendingTrips() {
     return this.trips.filter(trip => trip.status === 'pending')
   }
+
+  displayFutureTrips() {
+  return this.trips.filter(trip => trip.date > this.getTodaysDate())
+  }
+
+  displayPastTrips() {
+  return this.trips.filter(trip => trip.date < this.getTodaysDate())
+  }
+
 }
+
 
 
 export default Traveler
