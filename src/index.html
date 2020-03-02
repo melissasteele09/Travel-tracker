@@ -13,22 +13,22 @@
       <section id="fields">
         <div id="username">
           <label for="enter username">Username:</label>
-          <input type="text">
+          <input type="text" id="username-input">
         </div>
         <div id="password">
           <label for="enter password">Password:</label>
-          <input type="password">
+          <input type="password" id="password-input">
         </div>
       </section>
       <div>
-        <button>Bon Voyage!</button>
+        <button id="submit">Bon Voyage!</button>
       </div>
     </form>
   </section>
 
-  <section id="traveler-view">
+  <section id="traveler-view" class="hidden">
     <section class="client-dashboard">
-      <section class="welcome">
+      <section id="welcome">
 
       </section>
       <section id="total-cost-of-trips">
@@ -49,11 +49,8 @@
     </section>
   </section>
 
-  <section id="agency-view">
+  <section id="agency-view" class="hidden">
     <section class="client-dashboard">
-      <section class="welcome">
-
-      </section>
       <section id="agency-income">
         <h2>Total Income</h2>
       </section>
