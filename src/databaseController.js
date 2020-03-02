@@ -44,6 +44,7 @@ const databaseController = {
   loadAgency() {
     allTrips.map(trip => trip.location = allDestinations.filter(destination => destination.id === trip.destinationID))
     agency = new Agency(allUsers, allTrips)
+    domUpdates.displayAgency(agency, allDestinations)
   }
 }
 
