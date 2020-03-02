@@ -9,17 +9,16 @@ class Agency extends UserUtility {
 
 
   displayApprovedRequests() {
-  return this.trips.filter(trip => trip.status === 'approved')
-}
+    return this.trips.filter(trip => trip.status === 'approved')
+  }
 
   displayPendingRequests() {
-  return this.trips.filter(trip => trip.status === 'pending')
+    return this.trips.filter(trip => trip.status === 'pending')
   }
 
   displayTodaysTravelers() {
-      return this.trips.filter(trip => trip.date === this.getTodaysDate()
-      )
-    }
+    return this.trips.filter(trip => trip.date === this.getTodaysDate())
+  }
 }
 
 
