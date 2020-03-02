@@ -37,13 +37,13 @@ const databaseController = {
     let user = allUsers[id - 1]
     let trips = allTrips.filter(trip => trip.userID === parseInt(id))
     traveler = new Traveler(user, trips)
-    domUpdates.loadTraveler(traveler, allDestinations)
+    domUpdates.displayTraveler(traveler, allDestinations)
   },
 
 
   loadAgency() {
     allTrips.map(trip => trip.location = allDestinations.filter(destination => destination.id === trip.destinationID))
-    agent = new Agent(allUsers, allTrips)
+    agency = new Agency(allUsers, allTrips)
   }
 }
 

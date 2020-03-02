@@ -1,7 +1,7 @@
 import UserUtility from './userUtilities.js';
 
 
-class Traveler extends Utility {
+class Traveler extends UserUtility {
   constructor(data, trips) {
     super()
     this.id = data.id,

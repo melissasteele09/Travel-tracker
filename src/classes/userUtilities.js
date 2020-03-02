@@ -1,24 +1,28 @@
-var moment = require('moment');
+// var moment = require("moment");
 
 class UserUtility {
   constructor() {
   }
 
-  displayDateTime() {
-    return moment().format("LLLL")
-  }
+  // displayDateTime() {
+  //   return moment().format("LLLL")
+  // }
+  //
+  // getTodaysDate() {
+  //   return moment().format().substring(0, 10).split("-").join("/")
+  // }
+  //
+  // getDatesFromLastYear() {
+  //   let datesFromLastYear = []
+  //   for (var i = 0; i < 365; i++) {
+  //     datesFromLastYear.push(moment().subtract(i, "days").format("YYYY/MM/DD"))
+  //   }
+  //   return datesFromLastYear
+  // }
 
-  getTodaysDate() {
-    return moment().format().substring(0, 10).split("-").join("/")
-  }
-
-  getDatesFromLastYear() {
-    let datesFromLastYear = []
-    for (var i = 0; i < 365; i++) {
-      datesFromLastYear.push(moment().subtract(i, "days").format("YYYY/MM/DD"))
-    }
-    return datesFromLastYear
-  }
+  getDestinationById(destinations, id) {
+  return destinations.filter(destination => destination.id === parseInt(id))[0]
+}
 
   getDestinationById(destinations, id) {
   return destinations.filter(destination => destination.id === parseInt(id))[0]

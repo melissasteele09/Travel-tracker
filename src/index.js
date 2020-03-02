@@ -1,13 +1,37 @@
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
 
-// An example of how you import jQuery into a JS file if you use jQuery in that file
-import $ from 'jquery';
+import $ from "jquery";
+import "./css/base.scss";
+import "./images/water.jpg"
+import databaseController from "./databaseController.js"
+import domUpdates from "./domUpdates.js"
 
-// An example of how you tell webpack to use a CSS (SCSS) file
-import './css/base.scss';
+$("#submit").on("click", function() {
+  event.preventDefault()
+  logInInput()
+})
 
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
-import '../images/water.jpg'
+let logInInput = () => {
+  let userName = $('#username-input');
+  let password = $('#password-input');
+  let allUsernames = []
 
-console.log('This is the JavaScript entry file - your code begins here.');
+  for (var i = 0; i <= 50; i++) {
+    allUsernames.push(`traveler${i}`)
+  }
+  if (allUsernames.includes(userName.val().toLowerCase()) && password.val() === 'travel2020') {
+    logInTraveler(userName)
+  }
+  if (userName.val().toLowerCase() === 'agency' && password.val() === 'travel2020') {
+    logInAgency()
+  }
+}
+
+let logInTraveler = (userName) => {
+  console.log(userName.val())
+  let id = userName.val().substring(8, 10)
+  databaseController.loadUser(id)
+}
+
+let loginAgency = () => {
+  databaseController.loadAgency()
+}
