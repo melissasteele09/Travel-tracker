@@ -16,7 +16,7 @@ class Agency extends UserUtility {
     return this.trips.filter(trip => trip.status === 'pending')
   }
 
-  displayTodaysTravelerCount() {
+  getTodaysTravelers() {
     return this.trips.filter(trip => trip.date === this.getTodaysDate())
   }
 }
