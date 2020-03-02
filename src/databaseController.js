@@ -37,7 +37,7 @@ const databaseController = {
     let user = allUsers[id - 1]
     let trips = allTrips.filter(trip => trip.userID === parseInt(id))
     traveler = new Traveler(user, trips)
-    domUpdates.loadTraveler(traveler, allDestinations)
+    domUpdates.displayTraveler(traveler, allDestinations)
   },
 
 
