@@ -1,6 +1,5 @@
 import UserUtility from './userUtilities.js';
 
-
 class Traveler extends UserUtility {
   constructor(data, trips) {
     super()
