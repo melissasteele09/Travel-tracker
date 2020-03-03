@@ -13,7 +13,9 @@ class Agency extends UserUtility {
   }
 
   displayPendingRequests() {
-    return this.trips.filter(trip => trip.status === 'pending')
+    console.log(this.users)
+    let pendingTrips = this.trips.filter(trip => trip.status === 'pending')
+    return pendingTrips
   }
 
   getTodaysTravelers() {
