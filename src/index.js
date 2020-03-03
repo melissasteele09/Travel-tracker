@@ -27,11 +27,10 @@ let logInInput = () => {
 }
 
 let logInTraveler = (userName) => {
-  console.log(userName.val())
   let id = userName.val().substring(8, 10)
   databaseController.loadUser(id)
 }
 
-let loginAgency = () => {
+let logInAgency = () => {
   databaseController.loadAgency()
 }

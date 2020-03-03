@@ -33,17 +33,19 @@ Promise.all([userData, tripsData, destinationsData])
 
 
 const databaseController = {
+
   loadUser(id) {
     let user = allUsers[id - 1]
     let trips = allTrips.filter(trip => trip.userID === parseInt(id))
     traveler = new Traveler(user, trips)
-    domUpdates.displayTraveler(traveler, allDestinations)
+    domUpdates.displayTravelerView(traveler, allDestinations)
   },
 
 
   loadAgency() {
     allTrips.map(trip => trip.location = allDestinations.filter(destination => destination.id === trip.destinationID))
-    agency = new Agency(allUsers, allTrips)
+    agency = new Agency(allTrips, allUsers)
+    domUpdates.displayAgencyView(agency, allDestinations)
   }
 }
 
